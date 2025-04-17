@@ -1,5 +1,32 @@
 # 202130217 양하진     
 
+# 4월 10일 (6주차)
+
+## props를 통해 데이터 전달하기
+- React의 component architecture를 사용해서 **재사용할 수 있는 component**를 만들어서 지저분하고 중복된 코드를 삭제합니다.
+- **Board component**를 만들고, **Square component의 내용을 복사**합니다.
+- **Square component의 button을 하나만 남기고 모두 삭제**합니다.
+- Board component의 button을 Square component로 교체합니다.
+- App에서 호출하는 component를 Square에서 Board로 바꿔줍니다.
+- component를 **호출하는 쪽이 부모 component**입니다.
+
+## state 끌어올리기
+- **여러 자식 컴포넌트에서 데이터를 수집**하거나 두 자식 컴포넌트가 **서로 통신**하도록 하려면, **부모 컴포넌트에서 공유 state**를 선언 해야 합니다.
+- 부모 컴포넌트는 **props를 통해 해당 state를 자식 컴포넌트에 전달**할 수 있습니다.
+- 이렇게 하면 **자식 컴포넌트가 서로 동기화**되고, **부모 컴포넌트와도 동기화**되도록 할 수 있습니다.
+- React 컴포넌트를 리팩토링할 때 **부모 컴포넌트로 state를 끌어올리는 것**은 많이 사용하는 방법입니다.
+
+## component 분리하기
+- Board component가 export default로 선언된 것을 보면, component가 분리되었다는 것을 알 수 있습니다.
+
+#### [분리 순서]
+1. component 이름과 동일한 파일을 만듭니다.
+2. 해당 파일에 코드를 복사하고 export default 키워드를 추가합니다.
+3. 필요한 component와 useState를 추가합니다.
+4. App.js에서 해당 코드를 삭제하고, Board component를 import 해줍니다.
+5. App.js에서 useState의 import를 제거합니다.
+6. 정상적으로 동작하는지 확인합니다.
+
 # 4월 3일 (5주차)
 
 ## 화면 업데이트하기
